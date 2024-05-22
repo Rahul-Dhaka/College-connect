@@ -8,9 +8,9 @@ const Navbar = () => {
         <button className='h-full md:hidden' onClick={()=>alert(' menu button clicked')}><img src={menu} alt="" className=' h-full  '/></button>
     
     <div className=' text-white space-x-4 text-sm hidden md:flex'>
-        <h2>Home</h2>
-        <h2>Syllabus</h2>
-        <h2>Result</h2>
+        <h2 className='hover:cursor-pointer'>Home</h2>
+        <h2 className='hover:cursor-pointer'>Syllabus</h2>
+        <h2 className='hover:cursor-pointer'>Result</h2>
     </div>
     </div>
     

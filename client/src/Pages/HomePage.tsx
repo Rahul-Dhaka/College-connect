@@ -2,11 +2,11 @@
 import Sections from "@/Components/HomePage/Sections"
 import Top10 from "@/Components/HomePage/Top10"
 import { Input } from "@/Components/UI/input"
-import { useState } from "react";
+// import { useState } from "react";
 
 const HomePage = () => {
 
-  const [searchActive, setSearchActive] = useState(false);
+  // const [searchActive, setSearchActive] = useState(false);
 
 
 

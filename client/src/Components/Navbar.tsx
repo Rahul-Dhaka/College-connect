@@ -1,11 +1,22 @@
 
 import menu from '@/assets/menu-left.svg';
+import { useState } from 'react';
+import SideMenu from './SideMenu';
 
 const Navbar = () => {
+    const[isOpen, setIsOpen] = useState(false);
+
+    const toggleIsOpen = ():void =>{
+       setIsOpen(!isOpen);
+       console.log(isOpen);
+    }
+
+
   return (
    <div className="w-full h-10 bg-[rgb(0,0,0,0.6)] flex items-center justify-center fixed top-0 p-1 backdrop-blur-sm z-10">
     <div className='h-full p-2  absolute left-0'>
-        <button className='h-full md:hidden' onClick={()=>alert(' menu button clicked')}><img src={menu} alt="" className=' h-full  '/></button>
+        <button className='h-full md:hidden' onClick={toggleIsOpen}><img src={menu} alt="" className=' h-full  '/></button>
+        {(isOpen === true) && <SideMenu togglef={toggleIsOpen}/>}
     
     <div className=' text-white space-x-4 text-sm hidden md:flex ml-3'>
         <h2 className='hover:cursor-pointer'>Home</h2>

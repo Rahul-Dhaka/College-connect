@@ -8,6 +8,7 @@ const Sections = () => {
       <Button variant='outline' className="min-w-[120px] flex-1 bg-gray-100">Result</Button>
       <Button variant='outline' className="min-w-[120px] flex-1 bg-gray-100">Chat</Button>
       <Button variant='outline' className="min-w-[120px] flex-1 bg-gray-100">Events</Button>
+      <Button variant='outline' className="min-w-[120px] flex-1 bg-gray-100">Blogs</Button>
     </div>
   )
 }

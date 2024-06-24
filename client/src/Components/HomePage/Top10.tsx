@@ -12,7 +12,7 @@ const Top10 = () => {
                 <div key={index} className="relative rounded-lg flex flex-col justify-center items-center m-1 h-5/6 w-24 border shadow  ml-4 bg-white">
                     <div className="absolute bottom-0 left-0 -ml-5 -mb-0  text-red-600  h-1/4  rounded-full px-1  py-0 text-3xl font-bold  ">{index+1}</div>
                     <img className="rounded-full w-4/5  " alt="Profile picture" src="https://th.bing.com/th/id/OIP.audMX4ZGbvT2_GJTx2c4GgHaHw?rs=1&pid=ImgDetMain" />
-                    <div className="text-[12px] font-semibold">Jack Original</div>
+                    <div className="text-[12px] font-semibold">Jack Dwayne</div>
                 </div>  
             ))}
             </div>

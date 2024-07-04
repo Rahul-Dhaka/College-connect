@@ -17,7 +17,7 @@ import {
 
 const Navbar = () => {
     const[isOpen, setIsOpen] = useState(false);
-    const [loginpop, setLoginpop] = useState(false);
+    // const [loginpop, setLoginpop] = useState(false);
 
     const toggleIsOpen = ():void =>{
        setIsOpen(!isOpen);

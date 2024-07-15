@@ -26,6 +26,7 @@ const LoginPop = () => {
               <DrawerTitle>Edit profile</DrawerTitle>
               <DrawerDescription>
                 Make changes to your profile here. Click save when you're done.
+                Login fields go here.
               </DrawerDescription>
             </DrawerHeader>
             <DrawerFooter className="pt-2">

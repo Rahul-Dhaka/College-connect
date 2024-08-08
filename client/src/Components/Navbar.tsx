@@ -21,7 +21,6 @@ const Navbar = () => {
 
     const toggleIsOpen = ():void =>{
        setIsOpen(!isOpen);
-       console.log(isOpen);
     }
 
 
@@ -29,7 +28,7 @@ const Navbar = () => {
    <div className="w-full h-10 bg-[rgb(0,0,0,0.6)] flex items-center justify-center fixed top-0 p-1 backdrop-blur-sm z-10">
     <div className='h-full p-2  absolute left-0'>
         <button className='h-full md:hidden' onClick={toggleIsOpen}><img src={menu} alt="" className=' h-full  '/></button>
-        {(isOpen === true) && <SideMenu togglef={toggleIsOpen}/>}
+        <SideMenu togglef={toggleIsOpen} isOpen={isOpen}/>
     
     <div className=' text-white space-x-4 text-sm hidden md:flex ml-3'>
         <h2 className='hover:cursor-pointer'>Home</h2>

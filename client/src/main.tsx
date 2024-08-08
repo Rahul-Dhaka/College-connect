@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import UI from "./Components/UI/UI.tsx";
 import HomePage from "./Pages/HomePage.tsx";
+import Test from "./Components/Test.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,8 @@ const router = createBrowserRouter(
         <Route path="" element={<HomePage />} />
       </Route>
       <Route path="/components" element={<UI />} />
+      <Route path="/test" element={<Test />} />
+
     </>
   )
 );

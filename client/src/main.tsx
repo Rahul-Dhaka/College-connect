@@ -10,6 +10,7 @@ import {
 import UI from "./Components/UI/UI.tsx";
 import HomePage from "./Pages/HomePage.tsx";
 import Test from "./Components/Test.tsx";
+import Weather from "./Pages/Weather.tsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -19,6 +20,7 @@ const router = createBrowserRouter(
       </Route>
       <Route path="/components" element={<UI />} />
       <Route path="/test" element={<Test />} />
+      <Route path="/weather" element={<Weather />} />
 
     </>
   )

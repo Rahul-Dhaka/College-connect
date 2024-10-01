@@ -19,7 +19,7 @@ const SideMenu: React.FC<SideMenuProps> = ({ togglef, isOpen }) => {
 
       <div className=' p-1 m-1 flex flex-col text-white gap-3 mt-10'>
         <button className='px-2 bg-gray-50 bg-opacity-0 hover:bg-opacity-10 rounded-md w-full text-start h-10'> Courses</button>
-        <button className='px-2 bg-gray-50 bg-opacity-0 hover:bg-opacity-10 rounded-md w-full text-start h-10'> About us</button>
+        <button className='px-2 bg-gray-50 bg-opacity-0 hover:bg-opacity-10  rounded-md w-full text-start h-10'> About us</button>
       </div>
 
       </div>

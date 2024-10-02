@@ -2,11 +2,13 @@
 import menu from '@/assets/menu-left.svg';
 import { useState } from 'react';
 import SideMenu from './SideMenu';
+import { Input } from './UI/input';
+import { Label } from './UI/label';
 import {
     Drawer,
     DrawerClose,
     DrawerContent,
-    DrawerDescription,
+    // DrawerDescription,
     DrawerFooter,
     DrawerHeader,
     DrawerTitle,
@@ -17,10 +19,21 @@ import {
 
 const Navbar = () => {
     const[isOpen, setIsOpen] = useState(false);
+    const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
     // const [loginpop, setLoginpop] = useState(false);
 
     const toggleIsOpen = ():void =>{
        setIsOpen(!isOpen);
+    }
+
+    const handleLogin = (e: React.FormEvent) => {
+      e.preventDefault()
+      // Here you would typically handle the login logic
+      console.log('Login attempted with:', { username, password })
+      // Reset fields after attempt
+      setUsername('')
+      setPassword('')
     }
 
 
@@ -47,10 +60,33 @@ const Navbar = () => {
           </DrawerTrigger>
           <DrawerContent>
             <DrawerHeader className="text-left">
-              <DrawerTitle>Edit profile</DrawerTitle>
-              <DrawerDescription>
-                Make changes to your profile here. Click save when you're done.
-              </DrawerDescription>
+              <DrawerTitle>Login</DrawerTitle>
+              
+              <form onSubmit={handleLogin} className="space-y-4 pt-4">
+          <div className="space-y-2">
+            <Label htmlFor="username">Username</Label>
+            <Input
+              id="username"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+          <div className="space-y-2">
+            <Label htmlFor="password">Password</Label>
+            <Input
+              id="password"
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+          <Button type="submit" className="w-full">Login</Button>
+        </form>
+              
             </DrawerHeader>
             <DrawerFooter className="pt-2">
               <DrawerClose asChild>
